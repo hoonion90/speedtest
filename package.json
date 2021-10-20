@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/hoonion90/speedtest/issues"
   },
-  "homepage": "https://github.com/hoonion90/speedtest#readme"
+  "homepage": "https://github.com/hoonion90/speedtest#readme",
+  "dependencies": {
+    "ejs": "^3.1.6"
+  }
 }
