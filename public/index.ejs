@@ -21,6 +21,7 @@
   <script src="https://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-602f57604539048e"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3499947765418335" crossorigin="anonymous"></script>
+  <script src="js/speedtest.js"></script>
   <%- include('../public/inc/inc_gascript') %>
 </head>
 <body>
@@ -53,11 +54,37 @@
                     data-ad-width   = "320" 
                     data-ad-height  = "100"></ins> 
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
-    <h1>나의 플래시 반응속도 테스트</h1>
+    <h1><b>MY FLASH REACTION TEST (Only For PC)</b></h1>
   </header>
   <main>
     <article class="text-white">
-      <img src="/img/bg/bg00.jpg" style="width: 100%; margin-top: -2px;">
+      <section></section>
+      <section class="game-area">
+        <div class="game-wrap game-start active" id="gameStart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+            <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+            <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+          </svg><br><br>
+          <span class="fs-3">When the red box turns Green, <br>Press key [D] or [F] as quickly as you can.</span><br><br>
+          <span class="fs-2">Press [Enter] to start.</span>
+        </div>
+        <div class="game-wrap game-ready inactive" id="gameReady">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+          </svg><br><br>
+          <span class="fs-1">Wait for Green...</span>
+        </div>
+        <div class="game-wrap game-click inactive" id="gameClick">
+          <span class="fs-1">Press flash([D] or [F])</span>
+        </div>
+        <div class="game-wrap game-result inactive" id="gameResult"></div>
+        <div class="game-wrap game-caution inactive" id="gameCaution">
+          <span class="fs-1">Too Soon!</span><br><br>
+          <span class="fs-1">Press [Enter] to start.</span>
+        </div>
+      </section>
+      <section></section>
       <!-- <section class="col-12 text-center">
         <span class="fs-4">총 플레이 인원 수</span><br>
         <span class="fs-1"><cnt id="players"></cnt> 명</span>
@@ -90,10 +117,9 @@
             e.parentNode.insertBefore(j, e);
         })(document, 'script');
         window.onload = function(){
-          $('#taboola-livere').hide();
-          $('#taboola-livere').hide();
-          $('#taboola-livere').hide();
-          $('#taboola-livere').hide();
+          setTimeout(()=>{$('#taboola-livere').hide();},10);          setTimeout(()=>{$('#taboola-livere').hide();},500);
+          setTimeout(()=>{$('#taboola-livere').hide();},1000);
+          setTimeout(()=>{$('#taboola-livere').hide();},1500);
         }
         </script>
 

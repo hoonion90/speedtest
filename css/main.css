@@ -1,4 +1,4 @@
-header{text-align: center; padding: 20px; background: #ffeb00;}
+header{text-align: center; padding: 20px; width: 100%; max-width: 1050px; margin: 0 auto;}
 header h1{
     color: #000
     /* background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -19,7 +19,7 @@ header h1{
 body{
     margin: 0;
     /* font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; */
-    font-family: 'NeoDunggeunmo';
+    /* font-family: 'NeoDunggeunmo'; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.625;
@@ -31,10 +31,11 @@ body{
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
-    max-width: 600px;
+    /* max-width: 1050px; */
     margin: 0 auto;
 }
-article{background-color: #7f4c2f; padding-bottom: 40px;}
+main{max-width: 1050px; width: 100%; margin: 0 auto;}
+article{background-color: #e8e8e8; padding-bottom: 40px;}
 article img{width: 100%; max-width: 600px;}
 section{padding: 10px;}
 footer{position:fixed; bottom: 0; width: 100%; max-width: 600px;}
@@ -52,3 +53,12 @@ footer .copyright{width:100%; max-width: 600px; text-align: center; color: #fff;
 
 /*liveRE*/
 section.livere-section{background: #fff}
+
+section.game-area{color: #fff; padding: 0;}
+.game-wrap{width: 1050px; height: 500px; text-align: center; display: table-cell; vertical-align: middle; font-weight: 600; text-shadow: 1.5px 1.5px #101010;}
+.game-wrap.inactive{display: none;}
+.game-wrap.game-start{background-color:#2b87d1;}
+.game-wrap.game-ready{background-color:#ce2636;}
+.game-wrap.game-click{background-color:#4bdb6a;}
+.game-wrap.game-result{background-color:#2b87d1;}
+.game-wrap.game-caution{background-color:#e29e1f;}
