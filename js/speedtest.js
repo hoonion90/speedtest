@@ -18,7 +18,7 @@ window.onkeydown = (e) => {
     $result = $("#gameResult");
     $caution = $("#gameCaution");
     $count = $("#count");
-    console.log(e.key);
+    // console.log(e.key);
     // if(e.key == "f" || e.key == "d"){
     //     console.log(e.key);
     // }
@@ -26,7 +26,7 @@ window.onkeydown = (e) => {
         inActive($click);
         active($result);
         timerStop();
-        console.log(time);
+        // console.log(time);
         $count.text(time);
         if(count <= 5) {
             sumTime += time;
@@ -34,7 +34,7 @@ window.onkeydown = (e) => {
         }
         if(count == 5){
             $("#testResult").val( Math.round(sumTime / 5) );
-            console.log(Math.round(sumTime / 5));
+            // console.log(Math.round(sumTime / 5));
             //document.mainx.submit();
         }
     }

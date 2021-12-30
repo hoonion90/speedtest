@@ -55,7 +55,7 @@ footer .copyright{width:100%; max-width: 600px; text-align: center; color: #fff;
 section.livere-section{background: #fff}
 
 section.game-area{color: #fff; padding: 0;}
-.game-wrap{width: 1050px; height: 500px; text-align: center; display: table-cell; vertical-align: middle; font-weight: 600; text-shadow: 1.5px 1.5px #101010;}
+.game-wrap{width: 1050px; height: 500px; text-align: center; display: table-cell; vertical-align: middle; font-weight: 600; /*text-shadow: 1.5px 1.5px #101010;*/}
 .game-wrap.inactive{display: none;}
 .game-wrap.game-start{background-color:#2b87d1;}
 .game-wrap.game-ready{background-color:#ce2636;}
