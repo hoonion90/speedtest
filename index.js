@@ -17,6 +17,10 @@ app.get('/', function (request, response) {
   response.render('index.ejs');
 });
 
+app.get('/result', function (request, response) {
+  response.render('result.ejs');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
