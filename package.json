@@ -21,7 +21,10 @@
     "express": "^4.17.1"
   },
   "type": "module",
-  "devDependencies": {},
+  "devDependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
