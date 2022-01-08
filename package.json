@@ -22,7 +22,6 @@
     "express": "^4.17.2"
   },
   "scripts": {
-    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
