@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <title>플래시속도 테스트</title>
+  <title>플래시반응속도 테스트 FlashSpeed Test</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="나의 게임 속 캐릭터 찾기, Flash speed Test, 모바일 엔터테인먼트 미디어. 심리테스트, 콘텐츠 소개, 공유 제공.">
   <!--라이브리 프로퍼티 설정-->
   <meta property="og:description" content="나의 플래시 반응속도는 몇단계?" />
-  <meta property="og:site" content="http://watu.me" />
-  <meta property="og:image" content="http://watu.me/img/bg/bg01.jpg" />
-  <meta property="og:title" content="플래시속도 테스트" />
+  <meta property="og:site" content="http://flash.watu.me" />
+  <meta property="og:image" content="http://flash.watu.me/img/flash.jpg" />
+  <meta property="og:title" content="플래시반응속도 테스트 FlashSpeed Test" />
   <!--라이브리 설정 끝-->
   <meta name="naver-site-verification" content="1826f3f532b58d6c6d780a0afa0d6eb07ebc9f69" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -21,6 +21,7 @@
   <script src="https://getbootstrap.com/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-602f57604539048e"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3499947765418335" crossorigin="anonymous"></script>
+  <script src="js/translate.js"></script>
   <%- include('../public/inc/inc_gascript') %>
 </head>
 <body>
@@ -31,9 +32,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">플래시 반응 테스트</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="http://www.watu.me">나의 캐릭터 찾기</a>
         </li>
@@ -53,15 +51,28 @@
                     data-ad-width   = "320" 
                     data-ad-height  = "100"></ins> 
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
-    <h3><b>MY FLASH REACTION TEST (Only For PC)</b></h3>
+    <h3 class="eng_trans"><b>MY FLASH REACTION SPEED TEST (Only For PC)</b></h3>
+    <h3 class="kor_trans"><b>플래쉬 반응속도 테스트 (PC버전)</b></h3>
   </header>
   <main>
     <article class="text-white">
+      <div class="form-check form-switch"> 
+        <input class="form-check-input" type="checkbox" role="switch" name="english" value="on" id="translate" onclick="changeLang(this);"/>
+        <label class="form-check-label" for="flexSwitchCheckDefault" style="color:#333; font-weight: bold;"
+          >ENGLISH</label>
+      </div>
+      <section class="col-12 text-center" style="border-radius: 10px;">
+        <div class="addthis_inline_share_toolbox"></div>
+      </section>
       <section></section>
       <section class="game-area">
         <div class="game-wrap game-result active" id="gameResult">
-          <span class="fs-1">YOUR AVERAGE</span><br><br>
-          <span class="fs-1">Your Average is <count id="count">****</count>ms</span><br><br>
+          <span class="fs-1 eng_trans">YOUR AVERAGE</span>
+          <span class="fs-1 kor_trans">당신의 평균</span>
+          <br>
+          <span class="fs-1 eng_trans">Your Average is <count id="count"><%=testResult%></count>ms</span>
+          <span class="fs-1 kor_trans">플래시 반응속도는 <count id="count"><%=testResult%></count>ms 입니다.</span>
+          <br>
           <a href="/"><span class="fs-2" style="color: gold">PLAY AGAIN ?</span></a>
         </div>
       </section>
@@ -85,7 +96,8 @@
             e.parentNode.insertBefore(j, e);
         })(document, 'script');
         window.onload = function(){
-          setTimeout(()=>{$('#taboola-livere').hide();},10);          setTimeout(()=>{$('#taboola-livere').hide();},500);
+          setTimeout(()=>{$('#taboola-livere').hide();},10);
+          setTimeout(()=>{$('#taboola-livere').hide();},500);
           setTimeout(()=>{$('#taboola-livere').hide();},1000);
           setTimeout(()=>{$('#taboola-livere').hide();},1500);
         }

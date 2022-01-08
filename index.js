@@ -1,7 +1,6 @@
 import express from 'express';
-
 const app = express();
-const port = 3000;
+const port = 80;
 
 app.set('view engine','ejs');
 app.use(express.static('.'));
@@ -12,13 +11,15 @@ app.use(express.static('.'));
 
 app.set('view engine','ejs');
 app.set('views', './public/')
+let testResult;
 
 app.get('/', function (request, response) {
   response.render('index.ejs');
 });
 
 app.get('/result', function (request, response) {
-  response.render('result.ejs');
+  testResult = request.query.testResult;
+  response.render('result.ejs',{testResult: testResult});
 });
 
 app.listen(port, () => {
