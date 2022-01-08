@@ -1,6 +1,5 @@
 import express from 'express';
 const app = express();
-const port = 80;
 
 app.set('view engine','ejs');
 app.use(express.static('.'));
@@ -27,6 +26,7 @@ app.get('/result', function (request, response) {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+var port = process.env.PORT || 3000; // 1
+app.listen(port, function(){
+  console.log('server on! http://localhost:'+port);
 });
