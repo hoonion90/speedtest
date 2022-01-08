@@ -20,8 +20,11 @@ app.get('/', function (request, response) {
 app.get('/result', function (request, response) {
   testResult = request.query.testResult;
   // console.log(testResult);
-  if(typeof(testResult) == "undefined") response.redirect('/');
-  response.render('result.ejs',{testResult: testResult});
+  if(typeof(testResult) == "undefined"){
+    response.redirect('/');
+  }else{  
+    response.render('result.ejs',{testResult: testResult});
+  }
 });
 
 app.listen(port, () => {
