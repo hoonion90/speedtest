@@ -22,7 +22,6 @@
     "express": "*"
   },
   "scripts": {
-    "web": "node index.js",
     "start": "node index.js",
     "start:dev": "nodemon index.js"
   },
