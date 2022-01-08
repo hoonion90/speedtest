@@ -12,6 +12,10 @@ app.set('view engine','ejs');
 app.set('views', './public/')
 let testResult;
 
+app.get("*", (req, res) => {
+  res.render('index.ejs');
+});
+
 app.get('/', function (request, response) {
   response.render('index.ejs');
 });
