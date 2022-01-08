@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <title>플래시속도 테스트</title>
+  <title>플래시반응속도 테스트 FlashSpeed Test</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="나의 게임 속 캐릭터 찾기, Flash speed Test, 모바일 엔터테인먼트 미디어. 심리테스트, 콘텐츠 소개, 공유 제공.">
   <!--라이브리 프로퍼티 설정-->
   <meta property="og:description" content="나의 플래시 반응속도는 몇단계?" />
-  <meta property="og:site" content="http://watu.me" />
-  <meta property="og:image" content="http://watu.me/img/bg/bg01.jpg" />
-  <meta property="og:title" content="플래시속도 테스트" />
+  <meta property="og:site" content="http://flash.watu.me" />
+  <meta property="og:image" content="http://flash.watu.me/img/flash.jpg" />
+  <meta property="og:title" content="플래시반응속도 테스트 FlashSpeed Test" />
   <!--라이브리 설정 끝-->
   <meta name="naver-site-verification" content="1826f3f532b58d6c6d780a0afa0d6eb07ebc9f69" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -22,7 +22,9 @@
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-602f57604539048e"></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3499947765418335" crossorigin="anonymous"></script>
   <script src="js/speedtest.js"></script>
+  <script src="js/translate.js"></script>
   <%- include('../public/inc/inc_gascript') %>
+  <script></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 0 10px;">
@@ -32,9 +34,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">플래시 반응 테스트</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="http://www.watu.me">나의 캐릭터 찾기</a>
         </li>
@@ -54,10 +53,19 @@
                     data-ad-width   = "320" 
                     data-ad-height  = "100"></ins> 
     <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script> -->
-    <h3><b>MY FLASH REACTION TEST (Only For PC)</b></h3>
+    <h3 class="eng_trans"><b>MY FLASH REACTION SPEED TEST (Only For PC)</b></h3>
+    <h3 class="kor_trans"><b>플래쉬 반응속도 테스트 (PC버전)</b></h3>
   </header>
   <main>
     <article class="text-white">
+      <div class="form-check form-switch"> 
+        <input class="form-check-input" type="checkbox" role="switch" name="english" value="on" id="translate" onclick="changeLang(this);"/>
+        <label class="form-check-label" for="flexSwitchCheckDefault" style="color:#333; font-weight: bold;"
+          >ENGLISH</label>
+      </div>
+      <section class="col-12 text-center" style="border-radius: 10px;">
+        <div class="addthis_inline_share_toolbox"></div>
+      </section>
       <section></section>
       <section class="game-area">
         <div class="game-wrap game-start active" id="gameStart">
@@ -65,22 +73,26 @@
             <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
             <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
           </svg><br><br>
-          <span class="fs-3">When the red box turns Green, <br>Press key [D] or [F] as quickly as you can.</span><br><br>
-          <span class="fs-2">Press [Enter] to start.</span>
+          <span class="fs-3 eng_trans">When the red box turns Green, <br>Press key [D] or [F] as quickly as you can.</span>
+          <span class="fs-3 kor_trans">빨간색 영역이 녹색으로 바뀌면 <br> [D] 또는 [F] 키를 최대한 빠르게 누르세요.</span><br>
+          <span class="fs-2 eng_trans">Press [Enter] to start.</span>
+          <span class="fs-2 kor_trans">시작하려면 [Enter] 키를 누르세요.</span>
         </div>
         <div class="game-wrap game-ready inactive" id="gameReady">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
             <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
           </svg><br><br>
-          <span class="fs-1">Wait for Green...</span>
+          <span class="fs-1 eng_trans">Wait for Green...</span>
+          <span class="fs-1 kor_trans">녹색을 기다리세요...</span>
         </div>
         <div class="game-wrap game-click inactive" id="gameClick">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-keyboard" viewBox="0 0 16 16">
             <path d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z"/>
             <path d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z"/>
           </svg><br>
-          <span class="fs-1">Press flash([D] or [F])</span>
+          <span class="fs-1 eng_trans">Press flash([D] or [F])</span>
+          <span class="fs-1 kor_trans">플래시를 누르세요!([D] 또는 [F])</span>
         </div>
         <div class="game-wrap game-result inactive" id="gameResult">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
@@ -88,18 +100,21 @@
             <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64a.715.715 0 0 1 .012-.013l.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354a.512.512 0 0 1-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5zM8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3z"/>
           </svg><br>
           <span class="fs-1">Time: <count id="count">****</count>ms</span><br>
-          <span class="fs-1">Press [Enter] to keep going</span>
+          <span class="fs-1 eng_trans">Press [Enter] to keep going</span>
+          <span class="fs-1 kor_trans">진행하려면 [Enter] 를 누르세요.</span>
         </div>
         <div class="game-wrap game-caution inactive" id="gameCaution">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-radioactive" viewBox="0 0 16 16">
             <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z"/>
             <path d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
           </svg><br>
-          <span class="fs-1">Too Soon!</span><br><br>
-          <span class="fs-1">Press [Enter] to start.</span>
+          <span class="fs-1 eng_trans">Too Soon!</span><br><br>
+          <span class="fs-1 kor_trans">너무 일찍이에요!</span><br><br>
+          <span class="fs-1 eng_trans">Press [Enter] to start.</span>
+          <span class="fs-1 kor_trans">진행하려면 [Enter] 를 누르세요.</span>
         </div>
       </section>
-      <form action="/result" name="mainx"><input id="testResult" type="text" style="display:none;" value=""/></form>
+      <form action="/result" name="mainx" target="post"><input id="testResult" type="text" style="display:none;" value=""/></form>
       <section></section>
       <!-- <section class="col-12 text-center">
         <span class="fs-4">총 플레이 인원 수</span><br>
@@ -133,7 +148,8 @@
             e.parentNode.insertBefore(j, e);
         })(document, 'script');
         window.onload = function(){
-          setTimeout(()=>{$('#taboola-livere').hide();},10);          setTimeout(()=>{$('#taboola-livere').hide();},500);
+          setTimeout(()=>{$('#taboola-livere').hide();},10);
+          setTimeout(()=>{$('#taboola-livere').hide();},500);
           setTimeout(()=>{$('#taboola-livere').hide();},1000);
           setTimeout(()=>{$('#taboola-livere').hide();},1500);
         }
@@ -146,8 +162,5 @@
   </main>
   <footer>
   </footer>
-  <script>
-
-  </script>
 </body>
 </html>
