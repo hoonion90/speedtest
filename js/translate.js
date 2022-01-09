@@ -38,6 +38,7 @@ function changeLang(element){
 
   $(document).ready(()=>{
     let lang = getCookie("lang");
+    $('.livere-section').hide();
     if(lang == "eng"){
         $('.eng_trans').show();
         $('.kor_trans').hide();
@@ -46,4 +47,5 @@ function changeLang(element){
         $('.kor_trans').show();
         $('.eng_trans').hide();
     }
+    setTimeout(()=>{$('.livere-section').show();},600);
   });

@@ -65,15 +65,15 @@ footer .copyright { width:100%; max-width: 600px; text-align: center; color: #ff
 .result-msg { background-color:#051b3e; padding: 20px; border-radius: 5px; } 
 
 /*liveRE*/
-section.livere-section { background: #fff } 
+section.livere-section { background: #fff; border-radius: 10px; } 
 
 section.game-area { color: #fff; padding: 0; } 
-.game-wrap { width: 1050px; height: 500px; text-align: center; display: table-cell; vertical-align: middle; font-weight: 600; /*text-shadow: 1.5px 1.5px #101010; */ } 
+.game-wrap { width: 1050px; height: 500px; text-align: center; display: table-cell; vertical-align: middle; font-weight: 600; /*text-shadow: 1.5px 1.5px #101010; */ border-radius: 10px; } 
 .game-wrap.inactive { display: none; } 
 .game-wrap.game-start { background-color:#2b87d1; } 
 .game-wrap.game-ready { background-color:#ce2636; } 
 .game-wrap.game-click { background-color:#4bdb6a; } 
-.game-wrap.game-result { background-color:#2b87d1; } 
+.game-wrap.game-result { background-color:#2b87d1;} 
 .game-wrap.game-caution { background-color:#e29e1f; } 
 
 count{color: rgb(255, 217, 0);}
