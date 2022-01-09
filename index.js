@@ -17,7 +17,7 @@ app.get('/', function (request, response) {
   response.render('index.ejs');
 });
 
-app.get('/result', function (request, response) {
+app.post('/result', function (request, response) {
   testResult = request.query.testResult;
   // console.log(testResult);
   if(typeof(testResult) == "undefined"){
