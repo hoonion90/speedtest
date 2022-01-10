@@ -1,10 +1,11 @@
 // import express from 'express';
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.set('view engine','ejs');
 app.use(express.static('.'));
-
+app.use(express.urlencoded({ extended: true }))
 // const express = require('express');
 // const app = express();
 // const port = 3000;
@@ -18,8 +19,9 @@ app.get('/', function (request, response) {
 });
 
 app.post('/result', function (request, response) {
-  testResult = request.query.testResult;
-  // console.log(testResult);
+  // testResult = request.query.testResult;
+  // JSON.stringify(req.body);
+  testResult = JSON.stringify(request.body.testResult);
   if(typeof(testResult) == "undefined"){
     response.redirect('/');
   }else{  

@@ -35,7 +35,7 @@ window.onkeydown = (e) => {
         if(count == 5){
             // console.log(Math.round(sumTime / 5));
             $("#testResult").val( Math.round(sumTime / 5) );
-            document.mainx.submit();
+            setTimeout(()=>{document.mainx.submit();},1000);
         }
     }
     else if( (e.key == "d" || e.key == "f") && $ready.hasClass("active")){
