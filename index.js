@@ -18,6 +18,10 @@ app.get('/', function (request, response) {
   response.render('index.ejs');
 });
 
+app.get('/result', function (request, response) {
+  response.render('index.ejs');
+});
+
 app.post('/result', function (request, response) {
   // testResult = request.query.testResult;
   // JSON.stringify(req.body);
