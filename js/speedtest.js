@@ -22,7 +22,7 @@ window.onkeydown = (e) => {
     // if(e.key == "f" || e.key == "d"){
     //     console.log(e.key);
     // }
-    if((e.key == "d" || e.key == "f") && $click.hasClass("active")){
+    if((e.key == "d" || e.key == "f" || e.key == "D" || e.key == "F") && $click.hasClass("active")){
         inActive($click);
         active($result);
         timerStop();
@@ -38,7 +38,7 @@ window.onkeydown = (e) => {
             setTimeout(()=>{document.mainx.submit();},1000);
         }
     }
-    else if( (e.key == "d" || e.key == "f") && $ready.hasClass("active")){
+    else if( (e.key == "d" || e.key == "f" || e.key == "D" || e.key == "F") && $ready.hasClass("active")){
         inActive($ready);
         active($caution);
         window.clearTimeout(timer2);
